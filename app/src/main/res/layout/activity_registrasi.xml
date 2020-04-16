@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:id="@+id/relativeUp"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/tvJudulRegis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvBarRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrasi"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@id/relativeUp"
+        android:textSize="@dimen/_22sdp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/tvBarRegistP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengguna"
+        android:layout_marginLeft="200dp"
+        android:layout_below="@id/relativeUp"
+        android:textSize="@dimen/_22sdp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:textColor="#34ACE0"/>
+
+    <ImageView
+        android:id="@+id/iconRegist"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_1ssp"
+        android:background="@drawable/person" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtNamaRegis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:backgroundTint="#4CD137"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvBarRegis"
+        android:hint="Masukkan Nama"
+        android:fontFamily="@font/nunito"/>
+
+    <ImageView
+        android:id="@+id/iconEmail"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_below="@+id/iconRegist"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_1ssp"
+        android:background="@drawable/mail" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtEmailRegis"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtNamaRegis"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:backgroundTint="#4CD137"
+        android:fontFamily="@font/nunito"
+        android:hint="Maukkan Email" />
+
+    <ImageView
+        android:id="@+id/iconPass"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iconEmail"
+        android:layout_marginStart="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_1ssp"
+        android:background="@drawable/lock" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtPasswordRegis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:backgroundTint="#4CD137"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/edtEmailRegis"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:fontFamily="@font/nunito"/>
+
+    <ImageView
+        android:id="@+id/iconAlamat"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iconPass"
+        android:layout_marginStart="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_1ssp"
+        android:background="@drawable/gps" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:backgroundTint="#4CD137"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/edtPasswordRegis"
+        android:hint="Masukan Alamat"
+        android:inputType="text"
+        android:fontFamily="@font/nunito"/>
+
+    <ImageView
+        android:id="@+id/iconHP"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iconAlamat"
+        android:layout_marginStart="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_1ssp"
+        android:background="@drawable/phone" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtKota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:backgroundTint="#4CD137"
+        android:layout_below="@id/edtTanggal"
+        android:layout_marginTop="5dp"
+        android:hint="08*******"
+        android:inputType="text"
+        android:fontFamily="@font/nunito"/>
+
+    <ImageView
+        android:id="@+id/iconLevel"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iconHP"
+        android:layout_marginStart="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_1ssp"
+        android:background="@drawable/elevator" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:backgroundTint="#4CD137"
+        android:layout_below="@id/edtKota"
+        android:layout_marginTop="5dp"
+        android:hint="Level / Kosongkan"
+        android:inputType="text"
+        android:fontFamily="@font/nunito"/>
+
+
+    <TextView
+        android:id="@+id/btnRegister"
+        android:layout_width="200dp"
+        android:layout_height="@dimen/_42sdp"
+        android:text="Daftar"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/edtBio"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nunito_extrabold"
+        android:textColor="#fff"
+        android:background="@drawable/bg_shape_full"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvPunyaAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudah punya akun?"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/nunito"/>
+
+    <TextView
+        android:id="@+id/tvLinkLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masuk"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/tvPunyaAkun"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/nunito"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textColor="#45AAF2"/>
+
+
+
+
+</RelativeLayout>
