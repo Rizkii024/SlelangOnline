@@ -124,8 +124,8 @@ public class BarangActivity extends AppCompatActivity implements  NavigationView
             @Override
             public void onItemClick(View view, int position) {
                 Barang barang = dataList.get(position);
-                String id= barang.getIdBarang();
-                showUpdateDialog(barang.getIdBarang());
+                String id= barang.getNamaBarang();
+                showUpdateDialog(id);
             }
         }));
         btnAdd.setOnClickListener(new View.OnClickListener() {
@@ -170,14 +170,17 @@ public class BarangActivity extends AppCompatActivity implements  NavigationView
         int id = item.getItemId();
 
         if (id == R.id.menu_barang) {
+            finish();
             startActivity(new Intent(context, BarangActivity.class));
         } else if (id == R.id.menu_lelang) {
+            finish();
             if (lvl.equals("Admin")){
                 startActivity(new Intent(context, LelangActivity.class));
             }else{
                 startActivity(new Intent(context, LelangActivitySpecial.class));
             }
         } else if (id == R.id.menu_hasil_lelang) {
+            finish();
             if (lvl.equals("Admin")) {
                 startActivity(new Intent(context, HasilLelangActivity.class));
             }else if(lvl.equals("Petugas")){

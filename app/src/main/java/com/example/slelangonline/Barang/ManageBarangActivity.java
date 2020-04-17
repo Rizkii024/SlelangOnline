@@ -71,7 +71,7 @@ public class ManageBarangActivity extends AppCompatActivity {
         txtDesc = (EditText) findViewById(R.id.txt_desc);
         btnSimpan = (TextView) findViewById(R.id.btn_simpan);
         ivChange = (ImageView) findViewById(R.id.iv_change);
-        Menubar = (ImageView) findViewById(R.id.ivMenuBack);
+        Menubar = (ImageView) findViewById(R.id.ivMenuBars);
     }
 
     private void initEvent() {
@@ -90,6 +90,7 @@ public class ManageBarangActivity extends AppCompatActivity {
         Menubar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 startActivity(new Intent(ManageBarangActivity.this,BarangActivity.class));
             }
         });
@@ -108,17 +109,13 @@ public class ManageBarangActivity extends AppCompatActivity {
         String desc = txtDesc.getText().toString();
 
         if(!TextUtils.isEmpty(title)){
-            // get key id
-            String id = ref.push().getKey();
 
-
-            Barang barangData = new Barang(id,url,title,desc);
-            barangData.setIdBarang(id);
+            Barang barangData = new Barang(url,title,desc);
             barangData.setPicTips(url);
             barangData.setNamaBarang(title);
             barangData.setContent(desc);
             // Add data to firebase
-            ref.child(id).setValue(barangData);
+            ref.child(title).setValue(barangData);
 
             Toast.makeText(this,"Post berhasil di masukan",Toast.LENGTH_LONG).show();
         }else{

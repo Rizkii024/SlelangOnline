@@ -29,7 +29,7 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_care, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_barang, parent, false);
         BarangAdapter.ViewHolder holder = new BarangAdapter.ViewHolder(view);
         return holder;
     }
